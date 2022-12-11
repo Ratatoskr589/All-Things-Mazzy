@@ -1,0 +1,34 @@
+//Golem Summoning - 2nd Clara Quest
+IF
+True()
+THEN
+	RESPONSE #100
+CutSceneId("Gereth")
+SetInterrupt(FALSE)
+ForceSpellPoint([2077.1444],WIZARD_FLAME_ARROW) 
+CreateVisualEffect("SPPLANAR",[2077.1444])
+Wait(1)
+CreateCreature("GOLMAG01",[2077.1444],S)  //Magic Golem
+Wait(1)
+ForceSpellPoint([2132.1470],WIZARD_FLAME_ARROW)
+CreateVisualEffect("SPPLANAR",[2132.1470])
+Wait(1)
+CreateCreature("GOLSAN01",[2132.1470],S)  //Sand Golem
+Wait(1)
+ForceSpellPoint([2195.1483],WIZARD_FLAME_ARROW)
+CreateVisualEffect("SPPLANAR",[2195.1483])
+Wait(1)
+CreateCreature("GOLKILL2",[2195.1483],S)  //Adamantine Golem
+Wait(1)
+ForceSpellPoint([2242.1449],WIZARD_FLAME_ARROW)
+CreateVisualEffect("SPPLANAR",[2242.1449])
+Wait(1)
+CreateCreature("GOLSAN01",[2242.1449],S)  //Sand Golem
+Wait(1)
+ForceSpellPoint([2274.1394],WIZARD_FLAME_ARROW)
+CreateVisualEffect("SPPLANAR",[2274.1394])
+Wait(1)
+CreateCreature("GOLMAG01",[2274.1394],S)  //Magic Golem
+Wait(1)
+StartDialogNoSet(Player1)
+END

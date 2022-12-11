@@ -1,0 +1,127 @@
+
+
+//Code for battle in Elven Temple
+IF
+	Global("_bDrowAttackElves","GLOBAL",4)
+	AreaCheck("AR2500")
+	!Allegiance(Myself,ENEMY)
+THEN
+	RESPONSE #100
+	ClearAllActions()
+	ChangeEnemyAlly(Myself,ENEMY)
+	ClearAllActions()
+END
+
+IF
+	Global("_bCNAttacksElves","GLOBAL",1)
+	AreaCheck("AR2500")
+	!Allegiance(Myself,ENEMY)
+THEN
+	RESPONSE #100
+	ClearAllActions()
+	ChangeEnemyAlly(Myself,ENEMY)
+	ClearAllActions()
+END		
+
+IF
+	AreaCheck("AR2500")
+	!Global("_bElhantalksingraveyard","GLOBAL",2)
+	Allegiance(Myself,ENEMY)
+	Name("c6elhan",Myself)
+THEN
+	RESPONSE #100
+	SetGlobal("_belhanescapesgraveyard","GLOBAL",1)
+	EscapeAreaMove("AR0800",771,926,NE) //Graveyard, outside of Bodhi's hideout.
+END
+
+IF
+	Global("_bElhantalksingraveyard","GLOBAL",2)
+	AreaCheck("AR2500")
+	!Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+	ClearAllActions()
+	ChangeEnemyAlly(Myself,NEUTRAL)
+	ClearAllActions()
+END
+
+//Code in the graveyard.
+IF
+	AreaCheck("AR0800")
+	!Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+	ChangeEnemyAlly(Myself,NEUTRAL)
+END
+
+IF
+	AreaCheck("AR0800")
+	Detect([PC])
+	Global("_bElhantalksingraveyard","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("_bElhantalksingraveyard","GLOBAL",1)
+END
+
+IF
+	Global("_bElhantalksingraveyard","GLOBAL",1)
+THEN
+	RESPONSE #100
+	StartDialogNoSet(Player1)
+	Continue()
+END
+
+IF
+	Global("_bElhantalksingraveyard","GLOBAL",2)
+	Global("_bDrowAttackElves","GLOBAL",4)
+THEN
+	RESPONSE #100
+	SetGlobal("_bDrowAttackElves","GLOBAL",5)
+	Continue()
+END
+
+IF
+	Global("_bElhantalksingraveyard","GLOBAL",2)
+	Global("_bCNAttacksElves","GLOBAL",1)
+THEN
+	RESPONSE #100
+	SetGlobal("_bCNAttacksElves","GLOBAL",2)
+	Continue()
+END	
+
+IF
+	Global("_bElhantalksingraveyard","GLOBAL",2)
+	AreaCheck("AR0800")
+	//Global("_belhanmovefix","GLOBAL",0)
+THEN
+	RESPONSE #100
+	EscapeAreaMove("AR2500",829,1094,SW)
+END
+/* Turned off.
+IF
+	Global("_bElhantalksingraveyard","GLOBAL",2)
+	AreaCheck("AR0800")
+	Global("_belhanmovefix","GLOBAL",1)
+THEN
+	RESPONSE #100
+	EscapeArea()
+END
+*/
+
+//Talking to CN after you get Bodhi in your party.
+IF
+	IfValidForPartyDialog("_bBodhi")
+	Global("_bc6ElhanBodhiTalk","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("_bc6ElhanBodhiTalk","GLOBAL",1)
+END
+
+IF
+	See([PC])
+	Global("_bc6ElhanBodhiTalk","GLOBAL",1)
+THEN
+	RESPONSE #100
+	StartDialog("c6Elhan2",[PC])
+END
+

@@ -1,0 +1,24 @@
+IF	//Trigger for Hexxat leaving the party forever.
+	Global("_bHexxatLeavesForever","GLOBAL",1)
+THEN
+	RESPONSE #100 
+	SetGlobal("KickedOut","LOCALS",2)
+	GivePartyAllEquipment()
+	TakePartyItem("OHHCLOAK") 
+	DestroyItem("OHHCLOAK")
+	LeaveParty() 
+	EscapeArea()
+END
+
+//Hexxat attack script in bbaldur to make sure it triggers while she's not in your party
+
+//Aerie Wing Reponse
+IF
+	Global("_bAerieWingResponse","GLOBAL",1)
+	IfValidForPartyDialogue("HEXXAT")
+	Global("_bHexxWingResponse","GLOBAL",0)
+	CombatCounter(0)
+THEN 
+	RESPONSE #100
+	StartDialogNoSet(Player1)
+END

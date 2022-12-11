@@ -1,0 +1,232 @@
+IF	//Script to create the bag if Hexxat dies.
+	OR(2)
+		Dead("hexxat")
+		StateCheck("hexxat",STATE_DEAD)
+	!PartyHasItem("OHHBAG")
+	Global("_bHexxatBag","GLOBAL",0)
+	!InPartyAllowDead("hexxat")
+	!Global("OHH_dragorespite","GLOBAL",3)
+THEN
+	RESPONSE #100
+	GiveItemCreate("OHHBAG","hexxat",0,0,0)
+	ActionOverride("hexxat",DropInventory())
+	SetGlobal("_bHexxatBag","GLOBAL",1)
+	SetGlobal("OHH_dragorespite","GLOBAL",3)
+	ActionOverride(Player1,DisplayStringNoNameHead(Player1,@1)) /*You defeat the vampire, but she transforms into mist and quickly disappears. All that remains where she stood is an old sack. Perhaps if you took it, you could hunt the creature down.*/
+END
+
+
+IF	//Script to put Hexxat inside the casket when she dies if she didn't yet give the bag to you. This would trigger after you pick up the bag.
+	PartyHasItem("OHHBAG")
+	StateCheck("hexxat",STATE_DEAD)
+	OR(2)
+		Global("_bHexxatBag","GLOBAL",0)
+		Global("_bHexxatBag","GLOBAL",1)
+	Global("_bHexxatDeadCasketTransform","GLOBAL",0)
+THEN
+	RESPONSE #100
+	ActionOverride(Player1,TakePartyItem("OHHBAG"))
+	ActionOverride(Player1,TransformItem("ohhcask","_bcask2"))
+	SetGlobal("_bHexxatDeadCasketTransform","GLOBAL",1)
+END
+
+
+IF	//If you have the bag and hexxat is dead, but you don't have a stake.
+	OR(2)
+		PartyHasItem("OHHBAG")
+		Exists("OHHBAG")
+	!InPartyAllowDead("hexxat")
+	Dead("hexxat")
+	OR(2)
+		Global("_bHexxatBag","GLOBAL",0)
+		Global("_bHexxatBag","GLOBAL",1)
+	!PartyHasItem("MISC6W")
+THEN
+	RESPONSE #100
+	SetGlobal("_bHexxatBag","GLOBAL",2)
+	ActionOverride(Player1,DisplayStringNoNameHead(Player1,@2)) /*The vampire is regenerating in her casket inside the old sack. If you had a stake, you could end her life forever.*/
+	ActionOverride(Player1,TakePartyItem("OHHBAG"))
+	ActionOverride(Player1,TransformItem("ohhcask2","_bcask2"))  //Prevents her from coming back.
+END
+
+
+IF	//If you have the bag and hexxat is dead and not in the party, and you have a stake.
+	PartyHasItem("OHHBAG")
+	!InPartyAllowDead("hexxat")
+	Dead("hexxat")
+	OR(3)
+		Global("_bHexxatBag","GLOBAL",0)
+		Global("_bHexxatBag","GLOBAL",1)
+		Global("_bHexxatBag","GLOBAL",2)
+	PartyHasItem("MISC6W")
+THEN
+	RESPONSE #100
+	SetGlobal("_bHexxatBag","GLOBAL",3)
+	ActionOverride(Player1,DisplayStringNoNameHead(Player1,@3)) /*With the vampire destroyed, her victim breathes again.*/
+	TakePartyItemNum("misc6w",1)
+	AddexperienceParty(12000)
+	ActionOverride(Player1,TakePartyItem("OHHBAG"))
+	ActionOverride(Player1,TransformItem("ohhcask2","ohhcask"))
+	ActionOverride(Player1,TransformItem("_bcask2","ohhcask"))
+	AddJournalEntry(@4,USER) /*Dragomir's Tomb was a trap. The one I knew as Hexxat was a thrall under the control of a vampire, one who wished to speak with me. However, I do not treat with monsters. I have killed the vampire and freed this girl's soul. Hopefully she will be better at making conversation now.*/
+	SetGlobal("_bClaraLives","GLOBAL",1)
+END
+	
+
+IF	//Script to add Clara to your party once Hexxat is dead.
+	Dead("hexxat")
+	Global("_bClaraLives","GLOBAL",1)
+	!InPartyAllowDead("hexxat")
+THEN
+	RESPONSE #100
+	SetGlobal("_bClaraLives","GLOBAL",2)
+	ActionOverride(Player1,CreateCreature("_bClara",[-1.-1],8))
+END
+
+
+IF	//Bug fix for killing Fake Hexxat if Hexxat doesn't in their cutscene.
+	Global("OHH_hexxat","OH7000",3)
+	!Dead("OHHFAK")
+THEN
+	RESPONSE #100
+	Kill("OHHFAK")
+END
+
+
+IF	//Script to allow you to kill Hexxat if she's not in the party (normally she's invulnerable)
+	HPLT("hexxat",2)
+	!InPartyAllowDead("hexxat")
+THEN
+	RESPONSE #100
+	Kill("hexxat")
+END	
+
+
+IF	//Script for Clara's waiting timer.
+	Global("_bClaraWaiting","GLOBAL",1)
+THEN
+	RESPONSE #100
+	ActionOverride("_bClara",MakeGlobalOverride())  //Should put Clara in the GAM file, overwriting previous entry if exists
+	SetGlobalTimer("_bClaraWaitingTimer","GLOBAL",ONE_DAY)
+	SetGlobal("_bClaraWaiting","GLOBAL",2)
+END
+
+IF	
+	Global("_bClaraWaiting","GLOBAL",2)
+	GlobalTimerExpired("_bClaraWaitingTimer","GLOBAL")
+THEN
+	RESPONSE #100
+	SetGlobal("_bClaraWaiting","GLOBAL",3)
+END
+
+IF	
+	Global("_bClaraWaiting","GLOBAL",3)
+	OR(2)
+	Global("_bLadyDelryn","GLOBAL",1)   //Married Cor
+	Global("_bLordAndLadyDelryn","GLOBAL",5)    //Married Anomen
+THEN
+	RESPONSE #100
+	SetGlobal("_bClaraWaiting","GLOBAL",0)
+	MoveGlobal("AR1001","_bClara",[652.209])  //Delryn Manor
+	//ActionOverride("_bClara",EscapeAreaMove("AR1001",652,209,SWW)) //Delryn Manor
+END	
+
+IF	
+	Global("_bClaraWaiting","GLOBAL",3)
+	Global("_bClaraCC","GLOBAL",1)  //Sets during Anomen Romance
+	!Global("_bLadyDelryn","GLOBAL",1)
+	!Global("_bLordAndLadyDelryn","GLOBAL",5)
+THEN
+	RESPONSE #100
+	SetGlobal("_bClaraWaiting","GLOBAL",0)
+	MoveGlobal("AR0406","_bClara",[1478.1644])   //Copper Coronet
+	//ActionOverride("_bClara",EscapeAreaMove("AR0406",1478,1644,SE))  //Copper Coronet
+END	
+
+IF	
+	Global("_bClaraWaiting","GLOBAL",3)
+	!Global("_bLordAndLadyDelryn","GLOBAL",5)
+	!Global("_bLadyDelryn","GLOBAL",1)
+	!Global("_bClaraCC","GLOBAL",1)
+	!Global("AttackedThieves","GLOBAL",1)  //Thieves Not Hostile
+	!Dead("aran")
+	OR(2) 
+	Global("_bRenalOHHFAK","GLOBAL",2) //Talked to Renal as Hexxat
+	Global("_bRenalClara","GLOBAL",2)   //Talked to Renal as Clara
+THEN
+	RESPONSE #100
+	SetGlobal("_bClaraWaiting","GLOBAL",0)
+	MoveGlobal("AR0306","_bClara",[873.563])   //Shadow Thief Headquarters
+	//ActionOverride("_bClara",EscapeAreaMove("AR0306",873,563,SW)) //Shadow Thief Headquarters
+END	
+
+IF	
+	Global("_bClaraWaiting","GLOBAL",3)
+	!Global("PLAYHOUSE","GLOBAL",1)  
+	!Global("_bLordAndLadyDelryn","GLOBAL",5)
+	!Global("_bLadyDelryn","GLOBAL",1)
+	!Global("_bClaraCC","GLOBAL",1)
+	OR(2)
+	Global("AttackedThieves","GLOBAL",1)  //Thieves Hostile
+	Dead("aran") //Aran Dead
+THEN
+	RESPONSE #100
+	SetGlobal("_bClaraWaiting","GLOBAL",0)
+	MoveGlobal("AR0509","_bClara",[470.404]) //Five Flagons
+	//ActionOverride("_bClara",EscapeAreaMove("AR0509",470,404,E)) //Five Flagons
+END	
+
+IF	
+	Global("_bClaraWaiting","GLOBAL",3)
+	Global("PLAYHOUSE","GLOBAL",1)   //Bard Stronghold
+	!Global("_bLordAndLadyDelryn","GLOBAL",5)
+	!Global("_bLadyDelryn","GLOBAL",1)
+	!Global("_bClaraCC","GLOBAL",1)
+	OR(2)
+	Global("AttackedThieves","GLOBAL",1)  //Thieves Hostile
+	Dead("aran") //Aran Dead
+THEN
+	RESPONSE #100
+	SetGlobal("_bClaraWaiting","GLOBAL",0)
+	MoveGlobal("AR0522","_bClara",[470.404]) //Five Flagons
+	//ActionOverride("_bClara",EscapeAreaMove("AR0522",470,404,E)) //Five Flagons
+END	
+
+IF	
+	Global("_bClaraWaiting","GLOBAL",3)
+	!Global("PLAYHOUSE","GLOBAL",1)  
+	!Global("_bLordAndLadyDelryn","GLOBAL",5)
+	!Global("_bLadyDelryn","GLOBAL",1)
+	!Global("_bClaraCC","GLOBAL",1)
+	!Global("AttackedThieves","GLOBAL",1)  //Thieves Not Hostile
+	!Dead("aran") //Aran Not Dead
+	!Global("_bRenalOHHFAK","GLOBAL",2) //Talked to Renal as Hexxat
+	!Global("_bRenalClara","GLOBAL",2)   //Talked to Renal as Clara
+THEN
+	RESPONSE #100
+	SetGlobal("_bClaraWaiting","GLOBAL",0)
+	MoveGlobal("AR0509","_bClara",[470.404]) //Five Flagons
+	//ActionOverride("_bClara",EscapeAreaMove("AR0509",470,404,E)) //Five Flagons
+END	
+
+IF	
+	Global("_bClaraWaiting","GLOBAL",3)
+	Global("PLAYHOUSE","GLOBAL",1)   //Bard Stronghold
+	!Global("_bLordAndLadyDelryn","GLOBAL",5)
+	!Global("_bLadyDelryn","GLOBAL",1)
+	!Global("_bClaraCC","GLOBAL",1)
+	!Global("AttackedThieves","GLOBAL",1)  //Thieves Not Hostile
+	!Dead("aran") //Aran Not Dead
+	!Global("_bRenalOHHFAK","GLOBAL",2) //Talked to Renal as Hexxat
+	!Global("_bRenalClara","GLOBAL",2)   //Talked to Renal as Clara
+THEN
+	RESPONSE #100
+	SetGlobal("_bClaraWaiting","GLOBAL",0)
+	MoveGlobal("AR0522","_bClara",[470.404]) //Five Flagons
+	//ActionOverride("_bClara",EscapeAreaMove("AR0522",470,404,E)) //Five Flagons
+END	
+
+
+
+
+

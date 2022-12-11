@@ -1,0 +1,137 @@
+IF	//1st Edwin Romance Mod Shadows of Amn Rest. EXTEND_BOTTOM ~edwin.bcs~
+	!Global("EdwinRomanceActive","GLOBAL",0)
+	!Global("EdwinRomanceActive","GLOBAL",3)
+	Global("EdwinMatch","GLOBAL",1)
+	See(Player1)
+	!AreaType(DUNGEON)
+	CombatCounter(0)
+	!Global("Chapter","GLOBAL",5)
+	Global("EdwinLoveTalk","LOCALS",9)
+	OR(2)
+		Global("EddieCantGetDrunk","GLOBAL",0)
+		Global("EddieCantGetDrunk","GLOBAL",3)
+	Global("_brestcheck","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("_brestcheck","GLOBAL",1)
+END
+
+IF
+	Global("EdwinLoveTalk","LOCALS",10)
+	Global("_bEdwinLoveTalk10","LOCALS",0)
+THEN
+	RESPONSE #100
+	SetGlobal("_brestcheck","GLOBAL",2)
+	SetGlobal("_bEdwinLoveTalk10","LOCALS",1)
+END
+
+
+IF	//2nd Edwin Romance Mod Shadows of Amn Rest. EXTEND_BOTTOM ~edwin.bcs~
+	Global("TalkedDegardan","GLOBAL",4)
+	Gender("Edwin",MALE)
+	Global("EdwinKiss","GLOBAL",1)
+	!Global("EdwinRomanceActive","GLOBAL",0)
+	!Global("EdwinRomanceActive","GLOBAL",3)
+	Global("EdwinMatch","GLOBAL",1)
+	See(Player1)
+	CombatCounter(0)
+	Global("EdwinLoveTalk","LOCALS",31)
+	Global("_brestcheck","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("_brestcheck","GLOBAL",1)
+END
+
+IF
+	Global("EdwinKiss","GLOBAL",2)
+	Global("_bEdwinKiss2","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("_brestcheck","GLOBAL",2)
+	SetGlobal("_bEdwinKiss2","GLOBAL",1)
+END
+
+
+IF	//3rd Edwin Romance Mod Shadows of Amn Rest. EXTEND_BOTTOM ~edwin.bcs~
+	Gender("Edwin",MALE)
+	!Global("EdwinRomanceActive","GLOBAL",0)
+	!Global("EdwinRomanceActive","GLOBAL",3)
+	Global("EdwinMatch","GLOBAL",1)
+	See(Player1)
+	CombatCounter(0)
+	Global("EdwinLoveTalk","LOCALS",35)
+	Global("_brestcheck","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("_brestcheck","GLOBAL",1)
+END
+
+IF
+	Global("EdwinLoveTalk","LOCALS",36)
+	Global("_bEdwinLoveTalk36","LOCALS",0)
+THEN
+	RESPONSE #100
+	SetGlobal("_brestcheck","GLOBAL",2)
+	SetGlobal("_bEdwinLoveTalk36","LOCALS",1)
+END
+
+
+IF	//4th Edwin Romance Mod Shadows of Amn Rest. EXTEND_BOTTOM ~edwin.bcs~
+	InParty(Myself)
+	!Gender("Edwin",MALE)
+	!Global("EdwinRomanceActive","GLOBAL",0)
+	!Global("EdwinRomanceActive","GLOBAL",3)
+	Global("EdwinMatch","GLOBAL",1)
+	See(Player1)
+	!AreaType(DUNGEON)
+	CombatCounter(0)
+	Global("EdwinLoveTalk","LOCALS",21)
+	!Global("Chapter","GLOBAL",4)
+	!Global("Chapter","GLOBAL",5)
+	!Global("Chapter","GLOBAL",7)
+	Global("_brestcheck","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("_brestcheck","GLOBAL",1)
+END
+
+IF
+	Global("EdwinLoveTalk","LOCALS",22)
+	Global("_bEdwinLoveTalk22","LOCALS",0)
+THEN
+	RESPONSE #100
+	SetGlobal("_brestcheck","GLOBAL",2)
+	SetGlobal("_bEdwinLoveTalk22","LOCALS",1)
+END
+
+
+IF	//5th Edwin Romance Mod Shadows of Amn Rest. EXTEND_BOTTOM ~edwin.bcs~
+	See(Player1)
+	CombatCounter(0)
+	Global("ERCook","GLOBAL",1)
+	!Global("EdwinRomanceActive","GLOBAL",3)
+	!Global("EdwinromanceActive","GLOBAL",0)
+	OR(9)
+		AreaCheck("AR0313")
+		AreaCheck("AR0406")
+		AreaCheck("AR0509")
+		AreaCheck("AR0513")
+		AreaCheck("AR0709")
+		AreaCheck("AR0704")
+		AreaCheck("AR1602")
+		AreaCheck("AR2010")
+		AreaCheck("AR2202")
+	Global("_brestcheck","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("_brestcheck","GLOBAL",1)
+END
+
+IF
+	Global("ERCook","GLOBAL",2)
+	Global("_bERCook2","GLOBAL",0)
+THEN
+	RESPONSE #100
+	SetGlobal("_brestcheck","GLOBAL",2)
+	SetGlobal("_bERCook2","GLOBAL",1)
+END
