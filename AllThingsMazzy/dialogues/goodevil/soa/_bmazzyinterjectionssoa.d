@@ -503,3 +503,9 @@ INTERJECT_COPY_TRANS2 CLERK01 2 _bMazzytaxes /*Did you know that halflings have 
 	= @122 /*I will not allow you to hide away this information in the shadows any longer. Tell me the details of this tax break and I will see that they are shared.*/
 END
 
+//After you defeat the Shadow Dragon
+CHAIN IF WEIGHT #-1 ~Global("_bMazzyRespondsShadowDragon","GLOBAL",1)~ THEN MAZZYJ _bMazzyRespondsToShadowDragonDeath
+	@123 /*This foul beast falls and its evil is removed from the world. My friends have been avenged.*/
+	DO ~SetGlobal("_bMazzyRespondsShadowDragon","GLOBAL",2)~
+EXIT
+
