@@ -1940,3 +1940,20 @@ THEN
 We have defeated the leaders of the Shadow Thieves after a long and bloody battle. The organization is broken and scattered, though a few survivors may have gone to ground. We should return to Council Secretary Ewenn to inform him that the deed is done.*/
 	Continue()
 END
+
+IF	//Dialogue after you kill Shadow Dragon
+	AreaCheck("AR1402")
+	IfValidForPartyDialog("Mazzy")
+	Global("_bMazzyRespondsShadowDragon","GLOBAL",0)
+	Dead("ShaDra01")
+THEN
+	RESPONSE #100
+	SetGlobal("_bMazzyRespondsShadowDragon","GLOBAL",1)
+END
+
+IF	
+	Global("_bMazzyRespondsShadowDragon","GLOBAL",1)
+THEN 
+RESPONSE #100
+	StartDialogNoSet(Player1)
+END
