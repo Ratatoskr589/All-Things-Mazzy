@@ -1,5 +1,5 @@
 Ratatoskr and BCaesar's Multi-Mod: All Things Mazzy, Clara (Human Hexxat) NPC, Darkside Anomen, and more!
-Version 3.09
+Version 3.10
 
 Written, edited, and coded by BCaesar and Ratatoskr.
 
@@ -100,7 +100,7 @@ Part 5: "Soundset for Clara NPC" (Optional)
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 Additional Notes:
-1) You will probably get the most out of this mod if you recruit Mazzy as soon as possible. That said, it is literally impossible to see the entire mod in one play-through since many conversations are mutually exclusive and the dialogue will change based on your companions. We built AllThingsMazzy with replayability in mind so we recommend leaving it installed whether you want to romance her or not. Also, we tend to write our evil characters as EVIL and Faerun isn't always nice. Please keep that in mind.
+1) You will probably get the most out of this mod if you recruit Mazzy as soon as possible. That said, it is literally impossible to see the entire mod in one play-through since many conversations are mutually exclusive and the dialogue will change based on your companions. We built AllThingsMazzy with replayability in mind so we recommend leaving it installed whether you want to romance her or not. Also, we tend to write our evil characters as EVIL and Faerun often isn't nice. Please keep that in mind.
 
 2)  A couple notes about the friendship/romance: 
 	First of all, while some talks will trigger at specific points, this friendship/romance is primarily nonlinear. You can choose what you talk about and as long as you're not a total asshole or super evil, Mazzy will be your friend. You cannot break the friendship otherwise, though you can ask her to stop talking to you, and her tolerance for jokes will increase over time. There is a sense of humor beneath that stern exterior. If you break the friendship by accident, you will have one chance to get it back. 
@@ -108,6 +108,11 @@ Additional Notes:
 	For the romance, there are no restrictions on race, gender, or class. As long as your charisma doesn't suck and you aren't illiterate, you will have a chance (male halflings will have the easiest time, but 12 CHA is the highest stat requirement). You must complete Mazzy's quest and bring her with you to rescue Imoen in order to begin her romance in Chapter 6.
 
      Romancing others will not stop you from romancing Mazzy, though for most romances, you will have to make a choice if you are already committed. It will be very clear when that moment comes and Mazzy generally won't care if you commit to another romance afterwards. Once the romance is active, you will have additional choices for your talks and depending on your choices, it can get semi-explicit. We don't have sex scenes per se but Mazzy is happy to discuss such things as frankly as you wish. The romance can be activated in TOB and an active romance can be continued.
+
+
+3) Rating/Content Warnings:
+	Just to make this very clear, parts of the Mazzy-romance dialogue are definitely R-rated and NSFW. The most explicit content is hidden behind the dialogue option "I want to talk about sex."
+	For Content Warnings, there's a fair amount of violence/killing, similar to the game itself. There's also a fair amount of non-explicit sex, though the NPC-NPC romances themselves can be turned off, and some content relating to non-con/dubious consent. The latter is primarily discussing things that happened in the past or offscreen, but the worst of it involves Korgan and to a lesser extent, Edwin. If you install ForTheEvil, you're also given the choice to be similarly evil in a few places.
 
 ----------------------------------------------------------------------------------------------------------------------
 
@@ -132,20 +137,16 @@ In addition, we have tried to account for the following mods in our code, meanin
 
 ---------------------------------------------------------------
 
-Version 3.09   ***Spoilers Below***   ***Spoilers Below*** 
+Version 3.10   ***Spoilers Below***   ***Spoilers Below*** 
 
-Changes: 3.09
+Changes: 3.10
 
 ***This mod is no longer compatible with non-EE Baldur's Gate. Separating everything was getting in the way of our code. If you're really a die hard original Baldur's Gate user, message me and I can send you 1.071. That's the last version that might (and I mean might) work for you.
 
 	Main Mod: 
 		
-        	1. Fixed a setup issue with Alora, Nephele, and Petsy so that the Easter Egg script will work.
-                2. Minor grammatical correction in 1 Viconia line.
-                3. Added crossmod script Easter Egg for Smiling Imp's version of Alora
- 
-        For the Evil:
-                1. Added crossmod dialogue with Smiling Imp's versions of BG1 NPCs
+        	1. Updated a number of the Russian tra files to correct minor typos and add a missing line of dialogue.
+                2. Added a line from Mazzy if you kill the Shadow Dragon
 		
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -224,6 +225,23 @@ P. Additional Mazzy Interjections
 
 Changelog:    ***Spoilers Below***   ***Spoilers Below***
 (Current version not included in Changelog)
+
+Changes: 3.09
+
+***This mod is no longer compatible with non-EE Baldur's Gate. Separating everything was getting in the way of our code. If you're really a die hard original Baldur's Gate user, message me and I can send you 1.071. That's the last version that might (and I mean might) work for you.
+
+	Main Mod: 
+		
+        	1. Fixed a setup issue with Alora, Nephele, and Petsy so that the Easter Egg script will work.
+                2. Minor grammatical correction in 1 Viconia line.
+                3. Added crossmod script Easter Egg for Smiling Imp's version of Alora
+ 
+        For the Evil:
+                1. Added crossmod dialogue with Smiling Imp's versions of BG1 NPCs
+
+
+////////////////////////////////
+
 
 Version 3.08   ***Spoilers Below***   ***Spoilers Below*** 
 
