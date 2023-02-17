@@ -74,16 +74,16 @@ I have made amends with Mistress Ada, the Priestess of Talos and will once again
 	END
 	
 	IF ~~ THEN _bTalosPriestess7
-	SAY @21 /*Yes. 10,000 gold.*/
-	++ @22 /*Ummm... that's a lot of gold. Maybe I could pay you less?*/ GOTO _bTalosPriestess8
-	+ ~PartyGoldGT(9999)~ + @23 /*Okay. Here.*/ DO ~TakePartyGold(10000)~ GOTO _bTalosPriestess6
+	SAY @21 /*Only if you pay me its full value: Twelve gold, thirteen silver, and seventy-nine copper!*/
+	+ ~PartyGoldGT(12)~ + @22 /*I have thirteen gold. Can you give me change?*/ GOTO _bTalosPriestess8
+	+ ~PartyGoldGT(12)~ + @23 /*Okay. Here.*/ DO ~TakePartyGold(13)~ GOTO _bTalosPriestess6
 	++ @24 /*I don't have that much.*/ GOTO _bTalosPriestess9
 	++ @17 /*Maybe I will kill you instead!*/ GOTO _bTalosPriestess5
 	END
 	
 	IF ~~ THEN _bTalosPriestess8
-	SAY @25 /*No. Pay it or suffer my wrath!*/
-	+ ~PartyGoldGT(9999)~ + @23 /*Okay. Here.*/ DO ~TakePartyGold(10000)~ GOTO _bTalosPriestess6
+	SAY @25 /*Talos does not deign to offer change! Round it up or suffer my wrath!*/
+	+ ~PartyGoldGT(12)~ + @23 /*Okay. Here.*/ DO ~TakePartyGold(13)~ GOTO _bTalosPriestess6
 	++ @24 /*I don't have that much.*/ GOTO _bTalosPriestess9
 	++ @17 /*Maybe I will kill you instead!*/ GOTO _bTalosPriestess5
 	END
@@ -113,7 +113,7 @@ END
 APPEND TALMISS IF ~~ THEN _bTalosPriestess11
 	SAY @28 /*Again? What do you want now?*/
 	+ ~PartyHasItem("MISC4Y")~ + @29 /*I have your necklace here.*/ DO ~TakePartyItem("MISC4Y")~ EXTERN TALMISS _bTalosPriestess6
-	+ ~PartyGoldGT(9999)~ + @30 /*I lost your necklace but here's 10,000 gold instead.*/ DO ~TakePartyGold(10000)~ EXTERN TALMISS _bTalosPriestess6
+	+ ~PartyGoldGT(12)~ + @30 /*I lost your necklace but here's 13 gold instead.*/ DO ~TakePartyGold(13)~ EXTERN TALMISS _bTalosPriestess6
 	++ @31 /*Nothing. Sorry to bother you.*/ EXIT
 	++ @32 /*I've decided to kill you!*/ EXTERN TALMISS _bTalosPriestess5
 	END
@@ -128,22 +128,24 @@ INTERJECT_COPY_TRANS2 MAEVAR 17 _bMazzyCommentStealTalosNecklace1 /*Now get movi
 	
 //Priest of Cyric Interjects When you return the necklace.
 INTERJECT_COPY_TRANS MAEVAR 23 _bCyricWantsTalosNecklace1 /*It's a mystery how they walk with a dinner plate around their necks. I'll file it with the other garbage sent to Calimshan. They like jewelry big, I hear.*/
-	== MVGUARD1 IF ~Global("_bStealTalosNecklace","GLOBAL",1)~ THEN @34 /*May I have it for the Temple of Cyric, Mae'Var, sir? They're always interested in loot from other temples.*/
-	== MAEVAR IF ~Global("_bStealTalosNecklace","GLOBAL",1)~ THEN @35 /*You are interrupting me and that is a dangerous habit. You may take the necklace, but Cyric owes me a favor.*/	
+	== MVGUARD1 IF ~Global("_bStealTalosNecklace","GLOBAL",1)~ THEN @34 /*Um... Mae'Var... sir... that ship left yesterday morning.*/
+	== MAEVAR IF ~Global("_bStealTalosNecklace","GLOBAL",1)~ THEN @35 /*You are interrupting me and that is a dangerous habit. Hmmm... <CHARNAME>, here, have it back. We have enough clutter around here.*/
+		DO ~GiveItemCreate("MISC4Y",Player1,0,0,0)~
 	=  IF ~Global("_bStealTalosNecklace","GLOBAL",1)~ THEN @36 /*Now where was I? Ahh... yes, my petty burglars. Do not be too proud of your success. That was an easy job with little danger, though you may want to watch out for storms.*/
-	DO ~ActionOverride("mvpries",CreateItem("MISC4Y",0,0,0)) AddJournalEntry(@1002,QUEST)~ /*Necklace of Talos: Necklace for Cyric
+	DO ~AddJournalEntry(@1002,QUEST)~ /*Necklace of Talos: Necklace Retained.
 
-Mae'Var has passed the necklace on to his pet Priest of Cyric. The thief did not truly want the item, he only wanted to test my willingness to jump at his command. He also gave me a cryptic warning about watching out for storms, I assume because Talos is a god of lightning.*/
+Mae'Var gave me the necklace back. The chief thief did not truly want the item, he only wanted to test my willingness to jump at his command. He also gave me a cryptic warning about watching out for storms, I assume because Talos is a god of lightning. Perhaps I should return it.*/
 	END
 	
 //Priest of Cyric Interjects when you return the statue.
 INTERJECT_COPY_TRANS MAEVAR 22 _bCyricWantsStatue1 /*Ehh, kind of gaudy, isn't it? Can't see what's so compelling about it. I'll toss it in with the garbage going to Waterdeep. Lots of dainty collectors up there.*/
-	== MVGUARD1 IF ~Global("_bStealLathanderStatue","GLOBAL",1)~ THEN @34 /*May I have it for the Temple of Cyric, Mae'Var, sir? They're always interested in loot from other temples.*/
-	== MAEVAR IF ~Global("_bStealLathanderStatue","GLOBAL",1)~ THEN @37 /*You are interrupting me and that is a dangerous habit. You may take the statuette, but Cyric owes me a favor.*/
+	== MVGUARD1 IF ~Global("_bStealLathanderStatue","GLOBAL",1)~ THEN @34 /*Um... Mae'Var... sir... that ship left yesterday morning.*/
+	== MAEVAR IF ~Global("_bStealLathanderStatue","GLOBAL",1)~ THEN @37 /*You are interrupting me and that is a dangerous habit. Hmmm... <CHARNAME>, here, have it back. We have enough clutter around here.*/
+		DO ~GiveItemCreate("MISC4X",Player1,0,0,0)~
 	= @38 /*Now where was I? Ahh... yes, my petty burglars. Do not be too proud of your success; that was an easy job with little danger.*/
-	DO ~ActionOverride("mvpries",CreateItem("MISC4X",0,0,0)) AddJournalEntry(@1005,QUEST)~ /*Statuette of Lathander: Statuette for Cyric
+	DO ~AddJournalEntry(@1005,QUEST)~ /*Statuette of Lathander: Statuette Retained.
 
-Mae'Var has passed the statuette to his pet Priest of Cyric. The thief did not truly want the item, he only wanted to test my willingness to jump at his command.*/
+Mae'Var gave me the statuette back. The chief thief did not truly want the item, he only wanted to test my willingness to jump at his command.*/
 	END
 	
 //Talking with Dawnmaster Kreel After Taking the Statue
@@ -151,7 +153,7 @@ APPEND DAWNMAS IF WEIGHT #-1 ~Global("_bStealLathanderStatue","GLOBAL",1)~ THEN 
 	SAY @39 /*You are the thieves who stole from this temple. You will have no service from Lathander until you return the statuette. Please leave.*/
 	+ ~PartyHasItem("MISC4X")~ + @40 /*I have it here. My apologies for taking it but the theft was necessary.*/ DO ~TakePartyItem("MISC4X")~ GOTO _StealLathander2
 	+ ~PartyHasItem("MISC4X")~ + @41 /*Fine. Here's the statue but I'm not sorry.*/ DO ~TakePartyItem("MISC4X")~ GOTO _StealLathander3
-	++ @6 /*I lost it. I'm sorry. Can I pay you for a new one?*/ GOTO _StealLathander5
+	+ ~!PartyHasItem("MISC4X")~ + @6 /*I lost it. I'm sorry. Can I pay you for a new one?*/ GOTO _StealLathander5
 	++ @42 /*I'm sorry that your statuette was stolen, but it wasn't me.*/ GOTO _StealLathander4
 	++ @43 /*How did you know that I took it?*/ GOTO _StealLathander4
 	++ @44 /*Whatever. I didn't want anything from you anyway.*/ EXIT
@@ -172,14 +174,14 @@ I returned the statuette I stole to the Temple of Lathander and received the tha
 	END
 	
 	IF ~~ THEN _StealLathander5
-	SAY @460 /*We would prefer that our relic be returned. However, if it is truly beyond your reach, a donation of 5,000 gold would help restore our temple's glory.*/
-	+ ~PartyGoldGT(4999)~ + @23 /*Okay. Here.*/ DO ~TakePartyGold(5000)~ GOTO _StealLathander6
+	SAY @460 /*We would prefer that our relic be returned. However, if it is truly beyond your reach, a donation of 100 gold would allow us to commission another one.*/
+	+ ~PartyGoldGT(99)~ + @23 /*Okay. Here.*/ DO ~TakePartyGold(100)~ GOTO _StealLathander6
 	++ @24 /*I don't have that much.*/ GOTO _StealLathander7
 	END
 	
 	IF ~~ THEN _StealLathander6
 	SAY @45 /*Lathander blesses you for making amends. You will always be welcome here in the future.*/
-	IF ~~ THEN DO ~SetGlobal("_bStealLathanderStatue","GLOBAL",0) AddJournalEntry(@1007,QUEST_DONE)~ EXIT /*Although I did not return the temple's relic, I have made a large donation to Dawnmaster Kreel as compensation and the temple of Lathander will once again offer me services.*/
+	IF ~~ THEN DO ~SetGlobal("_bStealLathanderStatue","GLOBAL",0) AddJournalEntry(@1007,QUEST_DONE)~ EXIT /*Although I did not return the temple's relic, I have made a donation to Dawnmaster Kreel as compensation and the temple of Lathander will once again offer me services.*/
 	END
 
 	IF ~~ THEN _StealLathander7
