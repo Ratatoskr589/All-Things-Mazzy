@@ -19,16 +19,16 @@
 @18 /*TalosPriestessAda*/ = ~Hah! Kill me and Talos will strike you down. Now leave, I have things to do.~
 @19 /*TalosPriestessAda*/ = ~Yes! I should kill you for this insult, but I would rather leave you alive to kill my enemies. Now be a good <PRO_GIRLBOY> and go wipe out the Shadow Thieves. Or slaughter that new guild instead; they're quite annoying as well.~
 @20 /*TalosPriestessAda*/ = ~Or the best idea yet, kill both guilds down to the last man. But whatever you decide to do, leave me now!~
-@21 /*TalosPriestessAda*/ = ~Yes. 10,000 gold.~
-@22 /*TalosPriestessAda*/ = ~Ummm... that's a lot of gold. Maybe I could pay you less?~
+@21 /*TalosPriestessAda*/ = ~Only if you pay me its full value: Twelve gold, thirteen silver, and seventy-nine copper!~
+@22 /*CHARNAME*/ = ~I have thirteen gold. Can you give me change?~
 @23 /*CHARNAME*/ = ~Okay. Here.~
 @24 /*CHARNAME*/ = ~I don't have that much.~
-@25 /*TalosPriestessAda*/ = ~No. Pay it or suffer my wrath!~
+@25 /*TalosPriestessAda*/ = ~Talos does not deign to offer change! Round it up or suffer my wrath!~
 @26 /*TalosPriestessAda*/ = ~Then you will suffer. Return my necklace or give me the gold when you wish your suffering to cease. Leave now!~
 @27 /*TalosPriestessAda*/ = ~You are making a mistake. You will feel the full wrath of Talos in time. Now begone!~
 @28 /*TalosPriestessAda*/ = ~Again? What do you want now?~
 @29 /*CHARNAME*/ = ~I have your necklace here.~
-@30 /*CHARNAME*/ = ~I lost your necklace but here's 10,000 gold instead.~
+@30 /*CHARNAME*/ = ~I lost your necklace but here's 13 gold instead.~
 @31 /*CHARNAME*/ = ~Nothing. Sorry to bother you.~
 @32 /*CHARNAME*/ = ~I've decided to kill you!~
 
@@ -36,10 +36,10 @@
 @33 /*Mazzy*/ = ~Stealing is wrong, even from a priestess of Talos. If we can think of no other way to accomplish this task, then we must do our utmost to return the necklace afterwards.~
 
 //Priest of Cyric wants the necklace or statue.
-@34 /*PriestofCyric*/ = ~May I have it for the Temple of Cyric, Mae'Var, sir? They're always interested in loot from other temples.~
-@35 /*Mae'Var*/ = ~You are interrupting me and that is a dangerous habit. However, yes. You may take the necklace, but Cyric owes me a favor.~
+@34 /*Priest of Cyric*/ = ~Um... Mae'Var... sir... that ship left yesterday morning.~
+@35 /*Mae'Var*/ = ~You are interrupting me and that is a dangerous habit. Hmmm... <CHARNAME>, have it back. We have enough clutter around here.~
 @36 /*Mae'Var*/ = ~Now where was I? Ahh... yes, my petty burglars. Do not be too proud of your success. That was an easy job with little danger, though you may want to watch out for storms.~
-@37 /*Mae'Var*/ = ~You are interrupting me and that is a dangerous habit. However, yes. You may take the statuette, but Cyric owes me a favor.~
+@37 /*Mae'Var*/ = ~You are interrupting me and that is a dangerous habit. Hmmm... <CHARNAME>, have it back. We have enough clutter around here.~
 @38 /*Mae'Var*/ = ~Now where was I? Ahh... yes, my petty burglars. Do not be too proud of your success; that was an easy job with little danger.~
 
 //Dawnmaster Kreel comments if you steal the statue and come back.
@@ -51,7 +51,7 @@
 @44 /*CHARNAME*/ = ~Whatever. I didn't want anything from you anyway.~
 @45 /*DawnmasterKreel*/ = ~Lathander blesses you for making amends. You will always be welcome here in the future.~
 @46 /*DawnmasterKreel*/ = ~Your actions have made amends regardless of your intent. You will always be welcome here in the future.~
-@460 /*DawnmasterKreel*/ = ~We would prefer that our relic be returned. However, if it is truly beyond your reach, a donation of 5,000 gold would help restore our temple's glory.~
+@460 /*DawnmasterKreel*/ = ~We would prefer that our relic be returned. However, if it is truly beyond your reach, a donation of 100 gold would allow us to commission another one.~
 @461 /*DawnmasterKreel*/ = ~Then it is time for you to leave. Return when you are able to make amends for your ill deed.~
 @47 /*DawnmasterKreel*/ = ~You were seen entering our temple before the statuette was taken and it was missing when you left. The statuette also carries a small part of Lathander's power and I can feel its traces on you now.~
 @48 /*Mazzy*/ = ~Also, did I not tell you? I wrote him a note saying that we took the statuette and promising its return.~
@@ -85,21 +85,21 @@
 /*Necklace of Talos*/
 @1000 = ~Necklace of Talos~
 /*1001 in _bbaldur.tra*/
-@1002 = ~Necklace of Talos: Necklace for Cyric
+@1002 = ~Necklace of Talos: Necklace Retained.
 
-Mae'Var has passed the necklace on to his pet Priest of Cyric. The thief did not truly want the item, he only wanted to test my willingness to jump at his command. He also gave me a cryptic warning about watching out for storms, I assume because Talos is a god of lightning.~
+Mae'Var gave me the necklace back. The chief thief did not truly want the item, he only wanted to test my willingness to jump at his command. He also gave me a cryptic warning about watching out for storms, I assume because Talos is a god of lightning. Perhaps I should return it.~
 @1003 = ~Necklace of Talos: All's Well That Ends Well
 
 I have made amends with Mistress Ada, the Priestess of Talos, and will once again be able to receive services at that temple.~
 
 /*Statuette of Lathander*/
 @1004 = ~Statuette of Lathander~
-@1005 = ~Statuette of Lathander: Statuette for Cyric
+@1005 = ~Statuette of Lathander: Statuette Retained.
 
-Mae'Var has passed the statuette to his pet Priest of Cyric. The thief did not truly want the item, he only wanted to test my willingness to jump at his command.~
+Mae'Var gave me the statuette back. The chief thief did not truly want the item, he only wanted to test my willingness to jump at his command.~
 @1006 = ~Statuette of Lathander: The Statue Returned
 
 I returned the statuette I stole to the Temple of Lathander and received Dawnmaster Kreel's thanks. The temple will once again offer me services.~
 @1007 = ~Statuette of Lathander: A Donation Made
 
-Although I did not return the temple's relic, I have made a large donation to Dawnmaster Kreelas compensation and the temple of Lathander will once again offer me services.~
+Although I did not return the temple's relic, I have made a donation to Dawnmaster Kreel as compensation and the temple of Lathander will once again offer me services.~
