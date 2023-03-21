@@ -69,7 +69,16 @@ IF
 	!StateCheck("Anomen",CD_STATE_NOTVALID)
 	Alignment("Anomen",LAWFUL_NEUTRAL)
 	Global("_bChooseAnomen","GLOBAL",0)
+	AreaCheck("AR4500") //Your pocket plane.
+	Global("_bChooseAnomenFix","GLOBAL",0)
 THEN 
+	RESPONSE #100
+	SetGlobal("_bChooseAnomenFix","GLOBAL",1)
+END
+
+IF
+	Global("_bChooseAnomenFix","GLOBAL",1)
+THEN
 	RESPONSE #100
 	StartDialogNoSet(Player1)
 END
