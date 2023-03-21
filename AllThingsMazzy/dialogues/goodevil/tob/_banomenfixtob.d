@@ -8,9 +8,9 @@ IF WEIGHT #-1 ~Global("_bAnomenRomanceFix","GLOBAL",2)~ THEN  _bAnomenRomanceFix
 END
 
 //Conversation to let you choose his past
-CHAIN IF WEIGHT #-5 ~Global("_bChooseAnomen","GLOBAL",0) Alignment("Anomen",LAWFUL_NEUTRAL)~ THEN ANOME25J _bAnomenDidWhat
+CHAIN IF WEIGHT #-5 ~Global("_bChooseAnomen","GLOBAL",0) Alignment("Anomen",LAWFUL_NEUTRAL) Global("_bChooseAnomenFix","GLOBAL",1)~ THEN ANOME25J _bAnomenDidWhat
 @3 /*<CHARNAME>, please tell me of our time together in Athkatla. Did I pass my test? Am I a knight of the Order of the Radiant Heart?*/
-DO ~SetGlobal("_bChooseAnomen","GLOBAL",1)~
+DO ~SetGlobal("_bChooseAnomen","GLOBAL",1) SetGlobal("_bChooseAnomenFix","GLOBAL",2)~
 END
 	++ @4 /*Yes, you did. You are a knight.. Your father disowned you though.*/ DO ~SetGlobal("AnomenIsKnight","GLOBAL",1) ChangeStat("Anomen",WIS,4,ADD) ChangeAlignment("Anomen",LAWFUL_GOOD)~ + _bGoodAnomen1
 	++ @5 /*No, you did not. You were cast from the Order.*/ DO ~SetGlobal("AnomenIsNotKnight","GLOBAL",1) ChangeAlignment("Anomen",CHAOTIC_NEUTRAL)~ + _bBadAnomen1
