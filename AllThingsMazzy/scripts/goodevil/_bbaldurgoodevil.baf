@@ -76,6 +76,7 @@ IF	//If you kill the Priestess of Talos or tell her you're keeping the Necklace 
 	OR(2) 
 		Dead("Talmiss") 
 		Dead("Talmiss2")
+	!Global("_bWrathofTalos","GLOBAL",0)
 THEN
 	RESPONSE #100
 	SetGlobal("_bWrathofTalos","GLOBAL",6)

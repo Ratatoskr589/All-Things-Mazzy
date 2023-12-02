@@ -1,5 +1,5 @@
 Ratatoskr and BCaesar's Multi-Mod: All Things Mazzy, Clara (Human Hexxat) NPC, Darkside Anomen, and more!
-Version 3.11
+Version 3.12
 
 Written, edited, and coded by BCaesar and Ratatoskr.
 
@@ -137,17 +137,15 @@ In addition, we have tried to account for the following mods in our code, meanin
 
 ---------------------------------------------------------------
 
-Version 3.11   ***Spoilers Below***   ***Spoilers Below*** 
+Version 3.12   ***Spoilers Below***   ***Spoilers Below*** 
 
-Changes: 3.11
+Changes: 3.12
 
 ***This mod is no longer compatible with non-EE Baldur's Gate. Separating everything was getting in the way of our code. If you're really a die hard original Baldur's Gate user, message me and I can send you 1.071. That's the last version that might (and I mean might) work for you.
 
 	Main Mod: 
 		
-        	1. Made it so Mae'Var gives you the necklace or statuette back after you give it to him.
-                2. Made it so Talos only kills you if you kill his high priestess while she's still angry at you for stealing the necklace (the rest of the time you can kill her with impunity).
-		3. Drastically reduced the amount you have to pay to the temples to regain their good favor.
+        	1. A fix that will hopefully stop our TOB "Choose what Anomen did in SoA" dialogue from playing early in EET.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 		
@@ -225,6 +223,20 @@ P. Additional Mazzy Interjections
 
 Changelog:    ***Spoilers Below***   ***Spoilers Below***
 (Current version not included in Changelog)
+
+Version 3.11   ***Spoilers Below***   ***Spoilers Below*** 
+
+Changes:
+
+	Main Mod: 
+		
+        	1. Made it so Mae'Var gives you the necklace or statuette back after you give it to him.
+                2. Made it so Talos only kills you if you kill his high priestess while she's still angry at you for stealing the necklace (the rest of the time you can kill her with impunity).
+		3. Drastically reduced the amount you have to pay to the temples to regain their good favor.
+
+
+///////////////////////////////////////////////////////
+
 
 Version 3.10   ***Spoilers Below***   ***Spoilers Below*** 
 
