@@ -1,5 +1,5 @@
 Ratatoskr and BCaesar's Multi-Mod: All Things Mazzy, Clara (Human Hexxat) NPC, Darkside Anomen, and more!
-Version 3.13 (EET Compatible)
+Version 3.13 
 
 Written, edited, and coded by BCaesar and Ratatoskr.
 
@@ -140,7 +140,7 @@ In addition, we have tried to account for the following mods in our code, meanin
 
 Version 3.13   ***Spoilers Below***   ***Spoilers Below*** 
 
-Changes: 3.13 (EET version)
+Changes: 3.13 
 
 ***This mod is no longer compatible with non-EE Baldur's Gate. Separating everything was getting in the way of our code. If you're really a die hard original Baldur's Gate user, message me and I can send you 1.071. That's the last version that might (and I mean might) work for you.
 
@@ -148,7 +148,7 @@ Changes: 3.13 (EET version)
 		
         	1. Updated the readme for clarity on how to contact us/change Clara's kit, along with some other minor edits. 
 
-(For reference, the only current difference between this version and 3.12 is those changelog differences and the removal of the single interjection that was somehow breaking EET compatiblity.)
+(For reference, the only current difference between the EET version on the forums and this version is the removal of the single interjection that was somehow breaking EET compatiblity.)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 		
