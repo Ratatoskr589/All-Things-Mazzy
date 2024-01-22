@@ -1,5 +1,5 @@
 Ratatoskr and BCaesar's Multi-Mod: All Things Mazzy, Clara (Human Hexxat) NPC, Darkside Anomen, and more!
-Version 3.12
+Version 3.13 (EET Compatible)
 
 Written, edited, and coded by BCaesar and Ratatoskr.
 
@@ -11,7 +11,7 @@ A few notes:
 
 2. If you would like to use part of our code in another mod, please just ask us. The answer is probably yes.
 
-3. The Beamdog forums are the best place to report bugs, make suggestions, or ask questions. It's also where you can see a more detailed breakdown of each section of the mod. 
+3. The Beamdog forums are the best place to report bugs, make suggestions, or ask questions. It's also where you can see a more detailed breakdown of each section of the mod. However, you can also email BCaesar at caesarbran@protonmail.com if you prefer.
       If you downloaded this mod from another location, the Beamdog thread is here: https://forums.beamdog.com/discussion/71473/megamod-2-45-mazzy-romance-clara-npc-darkside-anomen-flying-aerie-for-the-evil-more
 
 4. Much thanks to p_zombie325 for the Russian translation, energisedcamel for the sound files, and Edvin for the new Mazzy art.
@@ -22,10 +22,11 @@ Here's what this mod includes:
 Part 1: Main Installation
 
 1) All Things Mazzy: Romance, Friendship and More! 
-     This mod, as the title states, includes a Mazzy friendship, a romance, a way for her to join the Order of the Radiant Heart, numerous discussions between Mazzy and other NPCs, and many new interjections. To get the full Mazzy experience, you should install the optional For The Good component. Avoid this component if you want to be evil, since it adds many new chances for Mazzy to try to kill you. For a full list of everything in AllThingsMazzy, scroll to the end of this document.
+     This mod, as the title states, includes a Mazzy friendship, a romance, a way for her to join the Order of the Radiant Heart, numerous discussions between Mazzy and other NPCs, and many new interjections. To get the full Mazzy experience, you should install the optional For The Good component. Avoid this component if you want to be evil, since it adds many new chances for Mazzy to try to kill you. For a full list of everything in AllThingsMazzy, scroll down to just before the changelog.
 
 2) Clara (Human Hexxat) NPC   (Now with an optional soundset)
-    Exactly what it sounds like. We have reworked the end of the Hexxat intro quest so that you can kill Hexxat to keep Clara. She is a Neutral-Evil thief who can change her kit type at will. Although Clara starts out relatively weak, she levels up quickly and gains stats and abilities as she banters with other party NPCs. She has interjections throughout the game and three quests in SOA, one exclusive to For The Evil. You can also start a new TOB game and summon Clara to join you.
+    Exactly what it sounds like. We have reworked the end of the Hexxat intro quest so that you can kill Hexxat to keep Clara. She's a Neutral-Evil thief who can change her kit type at will. To do this, reform your party to remove Clara and then let her talk to you. You'll then have the option to adjust her kit.
+	Although Clara starts out relatively weak, she levels up quickly and gains stats and abilities as she banters with other party NPCs. She has interjections throughout the game and three quests in SOA, one exclusive to For The Evil. You can also start a new TOB game and summon Clara to join you.
 
 3) Darkside Anomen
      This is an expansion for Anomen if he fails his test. If you are romancing Anomen, you can take him down the most evil path to gain a Wisdom bonus and further dialogues. If you don't want to romance Anomen, then Clara will do it for you (Get both in your party and they'll start talking. This is optional).
@@ -86,7 +87,7 @@ Part 2: For the Evil (optional):
 
 
 Part 3: For the Good (optional):
-     Additional mod options that might be annoying for a truly evil party. With these, Mazzy and other party members will no longer sit idly by while you do horrible things. This makes things more consistent with other good characters' reactions and we recommend installing it for the full Mazzy experience. However, if you plan to be evil and want Mazzy anyway, you should probably skip this part. For more details, look below.
+     Additional mod options that might be annoying for an evil party. With these, Mazzy and other party members will no longer sit idly by while you do horrible things. This makes things more consistent with other good characters' reactions and we recommend installing it for the full Mazzy experience. However, if you plan to be evil and want Mazzy anyway, you should probably skip this part. For more details, look below.
 
 
 Part 4: "Do NOT allow duplicate TOB epilogues" component (optional):
@@ -95,12 +96,12 @@ Part 4: "Do NOT allow duplicate TOB epilogues" component (optional):
 
 
 Part 5: "Soundset for Clara NPC" (Optional)
-      This will install a basic soundset for the Clara NPC, including selection sounds, action sounds, and some other comments. It does not add voiced dialogue to her other talks. The voiced lines also do not match the text that will appear for Clara when you have subtitles turned on. This is not a bug.
+      This will install a basic soundset for the Clara NPC, including selection sounds, action sounds, and some other comments. It does not add voiced dialogue to her other talks. The voiced lines also do not match the text that will appear for Clara when you have subtitles turned on. This is intentional and not a bug.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 Additional Notes:
-1) You will probably get the most out of this mod if you recruit Mazzy as soon as possible. That said, it is literally impossible to see the entire mod in one play-through since many conversations are mutually exclusive and the dialogue will change based on your companions. We built AllThingsMazzy with replayability in mind so we recommend leaving it installed whether you want to romance her or not. Also, we tend to write our evil characters as EVIL and Faerun often isn't nice. Please keep that in mind.
+1) You will probably get the most out of this mod if you recruit Mazzy as soon as possible. That said, it is literally impossible to see the entire mod in one play-through since many conversations are mutually exclusive and the dialogue will change based on your companions. We built AllThingsMazzy with replayability in mind so we recommend leaving it installed whether you want to romance her or not. Also, we tend to write our evil characters as EVIL and our Faerun often isn't nice. Please keep that in mind.
 
 2)  A couple notes about the friendship/romance: 
 	First of all, while some talks will trigger at specific points, this friendship/romance is primarily nonlinear. You can choose what you talk about and as long as you're not a total asshole or super evil, Mazzy will be your friend. You cannot break the friendship otherwise, though you can ask her to stop talking to you, and her tolerance for jokes will increase over time. There is a sense of humor beneath that stern exterior. If you break the friendship by accident, you will have one chance to get it back. 
@@ -120,10 +121,10 @@ Installation and Compatibility:
 
 This AllThingsMazzy mega-mod is installed like any other Weidu mod. Unzip it, put the AllThingsMazzy folder and set up file in your main game folder, and then run the set up.
     - We recommend installing the mod after major quest and NPC mods but before your tweaks. This will help crossmod NPC content work properly. See the "List of Mods with Crossmod Content" file for more details.
-    - HOWEVER, if you plan to use the NPC Flirtpack or any romance mod that adds Player-Initiated Dialogues for existing NPCs, you should install those mods after AllThingsMazzy and any other banter/romance mods. We've done our best to account for PIDs in Mazzy, but they have a way of breaking other mods that are installed afterwards.
-    - After the main mod installs, choose whether you want ForTheGood/ForTheEvil and duplicate TOB epilogues. These sections are not mutually exclusive.
+    - HOWEVER, if you plan to use the NPC Flirtpack or any romance mod that adds Player-Initiated Dialogues for existing NPCs, you should install those mods after AllThingsMazzy and any other banter/romance mods if possible. We've done our best to account for PIDs in Mazzy, but they have a way of breaking other mods that are installed afterwards.
+    - After the main mod installs, choose whether you want ForTheGood/ForTheEvil and the other optional content. These sections are not mutually exclusive.
     - To install a later version, uninstall the previous version and delete the AllThingsMazzy folder before installing the new version as usual.
-    - We had to add scriptnames to three existing NPCs to make certain things trigger properly. This might cause issues with any other mods that do the same, but those are not common. If anyone wants a scriptname for Rose Bouquet, Gereth, BPROST1, DHARLOT1, or Bertrand the Companion, we'd be happy to share our code to aid compatibility.
+    - We had to add scriptnames to some existing NPCs to make certain things trigger properly. This might cause issues with any other mods that do the same, but those are not common. If anyone wants a scriptname for Rose Bouquet, Gereth, BPROST1, DHARLOT1, or Bertrand the Companion, we'd be happy to share our code to aid compatibility.
 
 Once installed, you shouldn't need to restart your game, though you may have already missed some interjections. We have put so much redundancy into our coding that you should be able to have a couple conversations, kick Mazzy out of your party, delete the mod, play half the game, get Mazzy back in your party, reinstall the mod, and have things pick up where they left off. You can break the game if you try, but we've done our best to make it difficult.
 
@@ -137,15 +138,17 @@ In addition, we have tried to account for the following mods in our code, meanin
 
 ---------------------------------------------------------------
 
-Version 3.12   ***Spoilers Below***   ***Spoilers Below*** 
+Version 3.13   ***Spoilers Below***   ***Spoilers Below*** 
 
-Changes: 3.12
+Changes: 3.13 (EET version)
 
 ***This mod is no longer compatible with non-EE Baldur's Gate. Separating everything was getting in the way of our code. If you're really a die hard original Baldur's Gate user, message me and I can send you 1.071. That's the last version that might (and I mean might) work for you.
 
 	Main Mod: 
 		
-        	1. A fix that will hopefully stop our TOB "Choose what Anomen did in SoA" dialogue from playing early in EET.
+        	1. Updated the readme for clarity on how to contact us/change Clara's kit, along with some other minor edits. 
+
+(For reference, the only current difference between this version and 3.12 is those changelog differences and the removal of the single interjection that was somehow breaking EET compatiblity.)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 		
@@ -223,6 +226,28 @@ P. Additional Mazzy Interjections
 
 Changelog:    ***Spoilers Below***   ***Spoilers Below***
 (Current version not included in Changelog)
+
+Version 3.12.1   ***Spoilers Below***   ***Spoilers Below*** 
+
+Changes: 3.12.1
+
+	Main Mod: 
+		
+        	1. Removed a Clara interjection that was breaking the EET install
+
+///////////////////////////////////////////////////////
+
+Version 3.12   ***Spoilers Below***   ***Spoilers Below*** 
+
+Changes: 3.12
+
+	Main Mod: 
+		
+        	1. A fix that will hopefully stop our TOB "Choose what Anomen did in SoA" dialogue from playing early in EET.
+
+
+///////////////////////////////////////////////////////
+
 
 Version 3.11   ***Spoilers Below***   ***Spoilers Below*** 
 

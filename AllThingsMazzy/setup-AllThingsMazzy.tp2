@@ -1,8 +1,8 @@
 BACKUP ~AllThingsMazzy/backup~
 
-AUTHOR ~BCaesar and Ratatoskr (Briana). E-mail at caesarbran@gmx.com~
+AUTHOR ~BCaesar and Ratatoskr (Briana). E-mail at caesarbran@protonmail.com~
 
-VERSION ~Version 3.12~
+VERSION ~Version 3.13~
 
 README ~AllThingsMazzy/Megamod-readme.txt~ //This gives people the option of opening the readme
 
@@ -432,7 +432,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~KishAss1.cre~ THEN BEGIN //Fix for Keldorn Strong
 COMPILE EVALUATE_BUFFER ~AllThingsMazzy/dialogues/crossmod/_bOrderFix.d~ USING ~AllThingsMazzy/translations/%LANGUAGE%/_bCrossmod.tra~
 ADD_JOURNAL TITLE (@1018) @1015 @1016 @1017 USING ~AllThingsMazzy/translations/%LANGUAGE%/_bCrossmod.tra~ //Order quest
 END ELSE BEGIN
- PRINT @162 /*NPC Strongholds not detected. Please install that mod first to avoid compatibility issues.*/
+ PRINT @162 /*NPC Strongholds not detected. If you have that mod, please install it first to avoid compatibility issues.*/
 END
 
 
