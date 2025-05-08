@@ -1,5 +1,5 @@
 Ratatoskr and BCaesar's Multi-Mod: All Things Mazzy, Clara (Human Hexxat) NPC, Darkside Anomen, and more!
-Version 3.13 
+Version 3.15 (EET Compatible)
 
 Written, edited, and coded by BCaesar and Ratatoskr.
 
@@ -14,7 +14,7 @@ A few notes:
 3. The Beamdog forums are the best place to report bugs, make suggestions, or ask questions. It's also where you can see a more detailed breakdown of each section of the mod. However, you can also email BCaesar at caesarbran@protonmail.com if you prefer.
       If you downloaded this mod from another location, the Beamdog thread is here: https://forums.beamdog.com/discussion/71473/megamod-2-45-mazzy-romance-clara-npc-darkside-anomen-flying-aerie-for-the-evil-more
 
-4. Much thanks to p_zombie325 for the Russian translation, energisedcamel for the sound files, and Edvin for the new Mazzy art.
+4. Much thanks to p_zombie325 and Skusha for the Russian translation, energisedcamel for the sound files, and Edvin for the new Mazzy art.
 
 
 Here's what this mod includes:
@@ -75,7 +75,7 @@ Part 2: For the Evil (optional):
 
 3) Bodhi-the-Elf NPC: At the end of SoA, should you direct Bodhi to accept Queen Ellesime's offer, Bodhi-the-Elf will ask to come with you. She is a Chaotic-Evil Elven monk. Good NPC's will again travel with her except for Mazzy, Anomen (if he's still with the Order), and Keldorn. Bodhi-the-Elf is a relatively quiet Easter-egg (much like the Wilson NPC was in BG2EE). 
 
-3) Viconia in Ust Natha: Expanded quests and dialogues for Viconia when she's in the city of the drow. Taken to it's most evil conclusion, you can find yourself leading a demon and a small army of drow against the elves.
+3) Viconia in Ust Natha: Expanded quests and dialogues for Viconia when she's in the city of the drow. Taken to it's most evil conclusion, you can find yourself leading a demon and a small army of drow against the elves. (SCS will break the final section of this quest. See the compatibility notes below.)
 
 4) Korgan-Hexxat Friendship. 7 optional dialogues leading to a somewhat creepy friendship. Starts after their 1st banter. 
 
@@ -136,19 +136,22 @@ In addition, we have tried to account for the following mods in our code, meanin
 2. NPC Romances: De'Arnise Romance, Edwin Romance, Haer'Dalis Romance, Imoen Romance, Keldorn Romance, Sarevok Romance, and the Yoshimo Romance. (Plus all canon romances) (Thematic compatibility varies)
 3. Miscellaneous Mods: Alternatives, Imoen4Ever, Saradas NPC (and about a dozen other NPCs with minor crossmod content), the Wilson Chronicles, NPC Strongholds
 
+Known Compatibility Issues:
+1. NPC Strongholds will break one of our Mazzy quests if installed after this Mod. In order to avoid this, NPC Strongholds must be installed first so our fix will run.
+2. The 'Improved fiends and celestials' component of Sword Coast Stratagems breaks our Ust Natha expansion for Viconia because it replaces a script file that we use. You'll either need to install that component before this mod, skip that component, or do some editing in Near Infinity.
+
 ---------------------------------------------------------------
 
-Version 3.13   ***Spoilers Below***   ***Spoilers Below*** 
+Version 3.16   ***Spoilers Below***   ***Spoilers Below*** 
 
-Changes: 3.13 
+Changes: 3.16
 
 ***This mod is no longer compatible with non-EE Baldur's Gate. Separating everything was getting in the way of our code. If you're really a die hard original Baldur's Gate user, message me and I can send you 1.071. That's the last version that might (and I mean might) work for you.
 
-	Main Mod: 
-		
-        	1. Updated the readme for clarity on how to contact us/change Clara's kit, along with some other minor edits. 
+Main Mod:
+ 
+	1. Minor bugfix to turn off a conversation that shouldn't happen in ToB. 
 
-(For reference, the only current difference between the EET version on the forums and this version is the removal of the single interjection that was somehow breaking EET compatiblity.)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 		
@@ -197,7 +200,7 @@ H. Jaheira & Mazzy: 2 conversations   (Also in TOB)
          - Another two conversations may play if you romance one or the other.
 
 I. Keldorn & Mazzy: 3 conversations (SOA & TOB)
-        -He will also sponsor her to join the Order of the Radiant Heart. This quest spans most of the game.
+        -He will also sponsor her to join the Order of the Radiant Heart. This quest spans most of the game. (NPC Strongholds can break this quest. See previous compatibility notes).
 
 J. Mazzy & Valygar: 4 talks building off their in-game banters
          - 2 are TOB only
@@ -227,9 +230,66 @@ P. Additional Mazzy Interjections
 Changelog:    ***Spoilers Below***   ***Spoilers Below***
 (Current version not included in Changelog)
 
+///////////////////////////////////////////////////////
+
+Version 3.15   ***Spoilers Below***   ***Spoilers Below*** 
+
+Changes:
+
+Mazzy Friendship/Romance:
+	1. Fixed a typo in one Mazzy friendship talk that mentioned the Shade Lord being dead even if he hadn't been killed yet. Now that line/option only shows if he has been killed.
+	2. Fixed a bug with the first Mazzy/Imoen where sometimes it would repeat endlessly.
+        3. Fixed some dialogue in the Mazzy-Shade Lord Possession talk where it would refer to the Shade Lord being dead even if you hadn't killed him.
+	4. Removed one talk from Mazzy-Imoen which neither of us liked.
+
+Keepable Clara:
+	1. Fixed a bug with the "Sleeps with Clara" section. Sometimes it wouldn't trigger after you had the conversation when you entered the inn.
+	2. Fixed a bug where Clara's gained special abilities had the wrong descriptions. 
+
+Miscellaneous
+	1. Fixed bug with the Prelate of the Order of the Radiant Heart to make things go smoother if you fight him but then want to make peace (there's an opportunity to reset the peace if you accidentally damage him again, like with Melf's Acid Arrow). Also fixed a glitch where his end dialogue wouldn't happen if you had Bodhi.
+	2. Added in a failsafe so that Dorn always regains his paladinhood if he joins the service of a god.
+
+For the Evil:
+        1. Fixed some bugs with the "Viconia Rules Ust Natha" quest line so that if you choose for her to stay in Ust Natha after not giving the demon the eggs she actually talks and does so.
+	2. Fixed a bug where the Order of the Radiant Heart Prelate wouldn't die if Bodhi was in your party.
+	3. In Ust Natha moved Imrae to the middle of the temple (not the entrance).
+	4. Made the demon a bit tougher so he finishes his talks with the silver dragon even if the dragon crits him.
+	5. Added some war-sages for the elf conversation in the graveyard, so you get to see the full dialogues if Hexxat is in your party (otherwise it ended and cut off the last few lines).
+        6. Fixed a bug where your adamantine weapons would vanish after the demon enchanted them if certain people were in your party.
+	7. Added in one Viconia dialogue for if Solufein was dead. It then leads into the existing dialogue for if you had his fake eggs.
+	8. Added in a dialogue if you are in the summoning chamber but don't have the eggs and the Matron is doing the summoning.
+
+For the Good
+	3. Turned off the scripts that made your party get involved if you fought Mazzy while she wasn't in your party.
+	4. Added in a reset trigger to "MazzyHostile" which sets it back to zero if she isn't in your party.
+
+///////////////////////////////////////////////////////
+
+Version 3.14   ***Spoilers Below***   ***Spoilers Below*** 
+
+Changes:
+
+	Main Mod: 
+		
+        	1. Updated the requirements for Dorn's quest so that it works even if you haven't done the Helm quest.
+		2. I'm also consolidating the mod download back into 1 version, since a single Clara interjection isn't reason enough to have multiple versions.
+
+///////////////////////////////////////////////////////
+
+Version 3.13   ***Spoilers Below***   ***Spoilers Below*** 
+
+Changes: 
+
+	Main Mod: 
+		
+        	1. Updated the readme for clarity on how to contact us and change Clara's kit, along with some other minor edits. 
+
+///////////////////////////////////////////////////////
+
 Version 3.12.1   ***Spoilers Below***   ***Spoilers Below*** 
 
-Changes: 3.12.1
+Changes:
 
 	Main Mod: 
 		
@@ -239,7 +299,7 @@ Changes: 3.12.1
 
 Version 3.12   ***Spoilers Below***   ***Spoilers Below*** 
 
-Changes: 3.12
+Changes:
 
 	Main Mod: 
 		
