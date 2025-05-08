@@ -2,7 +2,7 @@ BACKUP ~AllThingsMazzy/backup~
 
 AUTHOR ~BCaesar and Ratatoskr (Briana). E-mail at caesarbran@protonmail.com~
 
-VERSION ~Version 3.13~
+VERSION ~Version 3.16~
 
 README ~AllThingsMazzy/Megamod-readme.txt~ //This gives people the option of opening the readme
 
@@ -214,11 +214,11 @@ END
 
 COPY ~AllThingsMazzy/Clara/new-stuff/_BPoisA.spl~ ~override~ 
 SAY NAME1 @72 /*Create Poison Arrows*/
-SAY DESC @73 /*This ability allows Clara to create 15 poisonous Arrows of Biting, adding them to her inventory. Handle with care!*/
+SAY UNIDENTIFIED_DESC @73 /*This ability allows Clara to create 15 poisonous Arrows of Biting, adding them to her inventory. Handle with care!*/
 
 COPY ~AllThingsMazzy/Clara/new-stuff/_BFIRE.spl~ ~override~ 
 SAY NAME1 @105 /*Set Fireball Trap*/
-SAY DESC @106 /*This ability allows Clara to create a Fireball trap that will stay in position until someone walks too close. Friend or foe, the Fireball will then explode for massive damage.*/
+SAY UNIDENTIFIED_DESC @106 /*This ability allows Clara to create a Fireball trap that will stay in position until someone walks too close. Friend or foe, the Fireball will then explode for massive damage.*/
 
 COPY ~AllThingsMazzy/Clara/new-stuff/_BGlove.itm~ ~override~
 SAY NAME1 @74 /*Clara's Jansen Techno-Gloves*/
