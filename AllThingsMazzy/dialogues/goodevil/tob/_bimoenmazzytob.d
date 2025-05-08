@@ -359,7 +359,7 @@ CHAIN IMOEN25J _bImoenMazzyAlora
 DO ~SetGlobal("_bIMLoveTalk","GLOBAL",8)~
 EXIT
 
-//Pre-romance Crush Talk
+//Pre-romance Crush Talk Decided to deactivate this talk. Deactivated in _bmazzygoodevil.baf
 CHAIN IF WEIGHT #-1 ~!Global("ImoenRomanceActive","GLOBAL",2) Global("_bMazzyRomance","GLOBAL",0) Global("_BMazzyFriendship","GLOBAL",1) Global("bImMazCrushTalk","GLOBAL",2)~ THEN MAZZY25J _bImoenMazzyCrush3
 @104 /*There may be a situation developing that could derail your plans for us.*/
 DO ~SetGlobal("bImMazCrushTalk","GLOBAL",3)~
