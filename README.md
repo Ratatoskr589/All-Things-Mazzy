@@ -313,7 +313,9 @@ Please note that other mods may still overwrite the standard ToB epilogues regar
 This will install a basic soundset for the Clara NPC, including selection sounds, action sounds, and some other comments. It does not add voiced dialogue to her other talks. The voiced lines mostly do not match the text that will appear for Clara when you have subtitles turned on. This is not a bug.
 
 # Mod Component 6: Alternative Mazzy Portrait (Optional)
-![Alternative Mazzy Portrait](https://github.com/Ratatoskr589/All-Things-Mazzy/raw/refs/heads/main/AllThingsMazzy/copy/Portrait/NMAZZYL.bmp)
+![Default Mazzy Portrait]([https://github.com/Ratatoskr589/All-Things-Mazzy/raw/refs/heads/main/AllThingsMazzy/copy/Portrait/NMAZZYL.bmp](https://static.wikia.nocookie.net/baldursgategame/images/6/6f/Mazzy_Fentan_NMAZZY_Portrait_BG2.png/revision/latest?cb=20180926125931))  ![Alternative Mazzy Portrait](https://github.com/Ratatoskr589/All-Things-Mazzy/raw/refs/heads/main/AllThingsMazzy/copy/Portrait/NMAZZYL.bmp)
+
+LEFT: Default | RIGHT: Alternative
 
 # Compatibility Notes and Mod Install Order
 Mazzy MegaMod should be compatible with most other mods. We've worked hard to make it that way since Ratatoskr has a LOT of mods installed; however, we cannot guarantee that our content will mesh with all other mods in terms of NPC characterization/personality. We tend to write as though no other mods are installed since there's just too many to keep track of, and in some cases, we take existing NPC's in the opposite direction from what other mods chose to do.
