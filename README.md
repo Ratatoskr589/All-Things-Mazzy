@@ -358,3 +358,16 @@ When reinstalling a newer version of this mod you should always uninstall the ol
 - Endarire: Documenter and BCaesar/DavidW liason.
 
 - Fans and Bug Reporters: Thank you for your support!
+
+# Crossmod Policy and License
+**CROSSMOD**
+You may freely do crossmod content with Mazzy MegaMod if you include attribution to Mazzy MegaMod in your documentation.
+
+**MOD LICENSE**
+Mazzy MegaMod does not use a traditional formal license such as [Creative Commons](https://creativecommons.org/share-your-work/cclicenses/) nor [MIT](https://opensource.org/license/mit); however, it uses a similar license as described here:
+
+- All work you do with this is for non-commercial purposes.
+
+- You may use code from Mazzy MegaMod in your works if you include attribution to Mazzy MegaMod in your documentation and you notify at least one of the authors of Mazzy MegaMod in the [Mazzy MegaMod thread](https://forums.beamdog.com/discussion/71473/megamod-3-14-mazzy-romance-clara-npc-darkside-anomen-flying-aerie-for-the-evil-more-done/p1) or directly by other means regarding what code portions you used.
+
+- You may do crossmod with Mazzy MegaMod as described above.
