@@ -361,9 +361,11 @@ When reinstalling a newer version of this mod you should always uninstall the ol
 
 # Crossmod Policy and License
 **CROSSMOD**
+
 You may freely do crossmod content with Mazzy MegaMod if you include attribution to Mazzy MegaMod in your documentation.
 
 **MOD LICENSE**
+
 Mazzy MegaMod does not use a traditional formal license such as [Creative Commons](https://creativecommons.org/share-your-work/cclicenses/) nor [MIT](https://opensource.org/license/mit); however, it uses a similar license as described here:
 
 - All work you do with this is for non-commercial purposes.
